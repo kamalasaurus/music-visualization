@@ -10,7 +10,14 @@ System.config({
   },
   paths: {
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+    "npm:*": "jspm_packages/npm/*",
+    "three": "node_modules/three/build/three.js"
+  },
+
+  meta: {
+    "three": {
+      "exports": "THREE"
+    }
   },
 
   map: {
@@ -19,8 +26,6 @@ System.config({
     "core-js": "npm:core-js@1.2.7",
     "css": "github:systemjs/plugin-css@0.1.32",
     "json": "github:systemjs/plugin-json@0.2.3",
-    "mithril": "npm:mithril@0.2.5",
-    "skeleton-css": "npm:skeleton-css@2.0.4",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
