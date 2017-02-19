@@ -5,12 +5,9 @@ export default class ParticleMap {
     //console.log(THREE);
     const {scene, camera, renderer} = this.generateContext();
     this.attachRenderer(renderer);
-    this.attachCube(scene);
+    //this.attachCube(scene);
+    this.attachParticles(scene);
     this.initCamera(camera);
-
-    const render = this.render.bind(this, scene, camera, renderer);
-
-    render();
     this.render.call(this, scene, camera, renderer)
   }
 
@@ -32,6 +29,10 @@ export default class ParticleMap {
     const material = new THREE.MeshBasicMaterial({color: 0x00ff00});
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
+  }
+
+  attachParticles(scene) {
+
   }
 
   initCamera(camera) {
